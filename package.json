@@ -1,0 +1,17 @@
+{
+	"name": "bitty",
+	"preferGlobal": "false",
+	"version": "0.1.0",
+	"author": "Bill Roy <bill@bitlash.net>",
+	"description": "web serial terminal for arduino",
+	"scripts": {
+		"start": "node node_modules/tty.js/index.js --config ./config.json"
+	},
+	"dependencies" : {
+		"serialport": "0.7.3",
+		"tty.js"	: ">=0.2.6"
+	},
+	"engine": {
+		"node": ">=0.6"
+	}
+}
