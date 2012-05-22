@@ -1,0 +1,13 @@
+{
+  "users": {
+  	"bill":"hello"
+  	},
+  "https": {
+    "key": null,
+    "cert": null
+  },
+  "port": 8080,
+  "shell": "/usr/local/bin/node",
+  "shellArgs": ["/Users/Bill/stuff/bitty.js/bitty.js"],
+  "term": {}
+}
