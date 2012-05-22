@@ -1,0 +1,1 @@
+node node_modules/tty.js/index.js --config ./config.json
