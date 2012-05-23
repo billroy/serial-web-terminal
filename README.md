@@ -18,11 +18,21 @@ edit the config.json
   * --port argument for web shell server
   	* name conflict
 
+  * start tty from index.js with port and config args
 
 ### Bugs
+
+
+  * BUG: shellArgs in config.json has hardcoded path
 
   * BUG: ^C ends the shell; should send ^C to Arduino
 
   * BUG: clicking the tilde allows second shell, which interferes with first
   
-  * BUG: seems to boot twice, sometimes.  Double-initing the serial?
+  * BUG: seems to boot twice, most times. (fixed?)
+  
+  * BUG: double-echoes typed commands
+
+  * BUG: quit doesn't work
+
+	
