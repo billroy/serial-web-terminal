@@ -7,7 +7,7 @@
     "cert": null
   },
   "port": 8080,
-  "shell": "/usr/local/bin/node",
-  "shellArgs": ["/Users/Bill/stuff/bitty.js/bitty.js"],
+  "shell": "node",
+  "shellArgs": ["/Users/bill/stuff/bitty.js/bitty.js"],
   "term": {}
 }

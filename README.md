@@ -1,5 +1,12 @@
 ## bitty.js: web terminal for Bitlash based on tty.js
 
+
+### Prerequisites
+
+ * git
+ * node.js
+ * npm
+
 ### Install
 
 git clone...
@@ -23,15 +30,19 @@ edit the config.json
 ### Bugs
 
 
-  * BUG: shellArgs in config.json has hardcoded path
+  * BUG: shellArgs in config.json has/needs hardcoded path
 
   * BUG: ^C ends the shell; should send ^C to Arduino
 
   * BUG: clicking the tilde allows second shell, which interferes with first
+	* allow multiple viewers?
+	* disable new-tab?
   
-  * BUG: seems to boot twice, most times. (fixed?)
-  
+  * BUG: seems to boot twice, most times.
+
   * BUG: double-echoes typed commands
+
+  * BUG: with no arduino plugged in, shell exits with only a brief flash of black
 
   * BUG: quit doesn't work
 

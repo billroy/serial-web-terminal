@@ -15,6 +15,7 @@ port.on('data', function(data) {	// port input goes to stdout
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
+require('tty').setRawMode(true);			// pass ^C through to serial port
 process.stdin.on('data', function (data) {	// keyboard input goes to port
 	if (data === 'quit\r') 	process.exit();
 	else port.write(data);
