@@ -1,6 +1,6 @@
 # bitty.js
 
-## A web terminal for usb serial devices like Bitlash + Arduino, based on tty.js
+A web terminal for usb serial devices like Bitlash + Arduino, based on tty.js
 
 
 ## Prerequisites
@@ -17,24 +17,38 @@
 	node index.js
 	openurl localhost:8080
 
+Your browser will want credentials.  The default username is 'bitlash' and the default password is 'open sesame'.
+
+Once Bitlash comes up, type in the terminal as you would any terminal emulator.
+	
+## Security 
+
+Change the default passwords!  Edit config.users in index.js!
+
 ## Runtime options
 
 	$ node --help
 	Usage: node ./index [flags]
 	
 	Options:
-	  -p, --port  virtual serial port name                     
-	  -b, --baud  virtual serial port baud rate (default 57600)
-	  -h, --http  http port (default 8080)                     
+	  -p, --port  virtual serial port name (auto-detects FTDI ports on Mac/Linux)
+	  -b, --baud  virtual serial port baud rate (default 57600)                  
+	  -h, --http  http port (default 8080)                                       
 
 	$ node index.js -p serialport -b baudrate -h httpport
 
 
 ## Raw bitty.js
 
-Auto-finds first FTDI serial port on Mac and Linux.
+Auto-detects first FTDI serial port on Mac and Linux.
 
-	node bitty.js -p serialport -b baud
+	$ node bitty.js --help	Usage: node ./bitty.js [flags]
+	
+	Options:
+	  -p, --port  virtual serial port name (auto-detects FTDI ports on Mac/Linux)
+	  -b, --baud  virtual serial port baud rate                                  
+
+	$ node bitty.js -p serialport -b baud
 
 ## Todo
 

@@ -1,12 +1,12 @@
-#! /usr/local/bin/node
-
+//
 // bitty.js: node.js-based command line shell for arduino
 //
-
+//	Copyright 2012 Bill Roy (MIT License)
+//
 var opt = require('optimist');
 var argv = opt.usage('Usage: $0 [flags]')
 	.alias('p', 'port')
-	.describe('p', 'virtual serial port name')
+	.describe('p', 'virtual serial port name (auto-detects FTDI ports on Mac/Linux)')
 	.alias('b', 'baud')
 	.describe('b', 'virtual serial port baud rate')
 	.argv;
@@ -15,10 +15,6 @@ if (argv.help) {
 	opt.showHelp();
 	process.exit();
 } 
-
-console.log(process.cwd());	// ~
-console.log("PWD: " + process.env["PWD"]);
-console.log(process.env);	// blah
 
 shell = require("shelljs");
 var portlist, portname;
