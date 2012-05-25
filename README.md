@@ -1,4 +1,4 @@
-## bitty.js: web terminal for Bitlash based on tty.js
+## bitty.js: web terminal for usb serial devices like Bitlash, based on tty.js
 
 
 ### Prerequisites
@@ -16,16 +16,12 @@ openurl localhost:8080
 
 ### Configure
 
-edit the config.json
+UGLY: edit the config.json for tty.js
 
 ### Todo
 
-  * auto-find the serial port
-  * --port and --baud arguments
-  * --port argument for web shell server
-  	* name conflict
-
-  * start tty from index.js with port and config args
+  * start tty from index.js or bittyd.js with port and config args
+  * http port argument for web shell server
 
 ### Bugs
 
@@ -36,9 +32,5 @@ edit the config.json
 	* disable new-tab?
   
   * BUG: seems to boot twice, most times.
-
-  * BUG: with no arduino plugged in, shell exits with only a brief flash of black
-
-  * BUG: quit doesn't work
 
 	
