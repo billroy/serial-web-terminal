@@ -16,6 +16,10 @@ if (argv.help) {
 	process.exit();
 } 
 
+console.log(process.cwd());	// ~
+console.log("PWD: " + process.env["PWD"]);
+console.log(process.env);	// blah
+
 shell = require("shelljs");
 var portlist, portname;
 
