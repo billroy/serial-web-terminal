@@ -9,7 +9,7 @@ A web terminal for usb serial devices like Bitlash + Arduino, based on tty.js
  * git
  * node.js
  * npm
- * npm modules: tty.js, serialport, shelljs, and optimist are npm-installed
+ * npm modules: tty.js, serialport, shelljs, and optimist are npm-installed for you
 
 ## Install and Test Drive
 
@@ -21,17 +21,21 @@ The server should be running on port 8080.  Connect an arduino via USB, then bro
 
 	openurl http://localhost:8080
 
-Your browser will want credentials.  The default username is 'bitlash' and the default password is 'open sesame'.
+Your browser will want credentials.  The default username is 'bitlash' and the default password is 'open sesame'.  Please change the username and password; see below.
 
-Once Bitlash comes up in the terminal you can type commands just like any other terminal emulator.
+Once Bitlash comes up in the terminal you can type commands just like any other terminal emulator.  You can stop Bitlash with Control-C and quit the shell with Control-].
 	
 ## Security 
 
-Change the default passwords!  Edit config.users in index.js!
+Change the default passwords!  
+
+Edit index.js -- add/change the config.users section like this:
 
 	var config = {
 		'users': {
-			'bitlash':'open sesame'
+			'bitlash':'closed sesame',
+			'frodo': 'heavyring',
+			'pippin': 'oopsie'
 		}, ...
 	}
 
@@ -70,7 +74,10 @@ Auto-detects first FTDI serial port on Mac and Linux.
   * BUG: clicking the tilde allows second shell, which interferes with first
 	* allow multiple viewers?
 	* disable new-tab?
-  
+
+  * BUG: The usernames and passwords should be SHA-hashed for tty.js
+
+
 ## Caveat
 
   * Writes to ~/.tty.js/config.json because that's the only way to talk to tty.js
