@@ -36,9 +36,8 @@ var config = {
   'term': {}
 };
 
-shell = require('shelljs');
 var configfile = process.env['HOME'] + '/.tty.js/config.json';
-shell.echo(JSON.stringify(config)).to(configfile);
+var fs = require('fs');
+fs.writeFileSync(configfile, JSON.stringify(config));
 
 module.exports = require('tty.js');
-

@@ -15,11 +15,14 @@ A web terminal for usb serial devices like Bitlash + Arduino, based on tty.js
 	git clone https://github.com/billroy/bitty.js.git
 	npm install
 	node index.js
-	openurl localhost:8080
+	
+The server should be running on port 8080.  Connect an arduino via USB, then browse to: 
+
+	openurl http://localhost:8080
 
 Your browser will want credentials.  The default username is 'bitlash' and the default password is 'open sesame'.
 
-Once Bitlash comes up, type in the terminal as you would any terminal emulator.
+Once Bitlash comes up in the terminal you can type commands just like any other terminal emulator.
 	
 ## Security 
 
@@ -27,7 +30,7 @@ Change the default passwords!  Edit config.users in index.js!
 
 ## Runtime options
 
-	$ node --help
+	$ node index.js --help
 	Usage: node ./index [flags]
 	
 	Options:
