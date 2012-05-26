@@ -23,11 +23,16 @@ if (argv.port) portlist = shell.ls(argv.port);
 else if (process.platform === 'darwin') portlist = shell.ls("/dev/tty.usbserial*");
 else if (process.platform === 'linux') portlist = shell.ls("/dev/ttyUSB*");
 
-if (portlist.length == 1) {
-	portname = portlist[0];
-	process.stdout.write('Opening port ' + portname + '\n');
+if (portlist.length == 0) {
+	process.stdout.write('No ports found.\n');
 }
-else process.stdout.write('Ports:\n' + portlist.join('\n'));
+else if (portlist.length == 1) {
+	portname = portlist[0];
+}
+else {
+	process.stdout.write('Trying first of multiple ports:\n' + portlist.join('\n'));
+	portname = portlist[0];
+}
 
 var SerialPort = require('serialport').SerialPort;
 try {

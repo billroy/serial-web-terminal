@@ -26,6 +26,7 @@ var config = {
   'users': {
   	'bitlash':'open sesame'
   	},
+  // 'hostname': '0.0.0.0',		// to serve on all ports instead of just localhost
   'https': {
     'key': null,
     'cert': null
@@ -33,7 +34,11 @@ var config = {
   'port': argv.http || 8080,
   'shell': 'node',
   'shellArgs': shellargs,
+  'limitGlobal': 1,
+  'limitPerUser': 1,
   'term': {}
+//    visualBell: true
+//  }
 };
 
 var configfile = process.env['HOME'] + '/.tty.js/config.json';

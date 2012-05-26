@@ -29,7 +29,7 @@ Once Bitlash comes up in the terminal you can type commands just like any other 
 
 Change the default passwords!  
 
-Edit index.js -- add/change the config.users section like this:
+Edit index.js -- add/change "username":"password" pairs in the config.users section, like this:
 
 	var config = {
 		'users': {
@@ -80,5 +80,5 @@ Auto-detects first FTDI serial port on Mac and Linux.
 
 ## Caveat
 
-  * Writes to ~/.tty.js/config.json because that's the only way to talk to tty.js
+  * Writes to ~/.tty.js/config.json 
 	
