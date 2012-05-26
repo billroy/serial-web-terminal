@@ -2,6 +2,7 @@
 
 A web terminal for usb serial devices like Bitlash + Arduino, based on tty.js
 
+![bitty screen shot](bitty-screen-shot.png)
 
 ## Prerequisites
 
@@ -10,7 +11,7 @@ A web terminal for usb serial devices like Bitlash + Arduino, based on tty.js
  * npm
  * npm modules: tty.js, serialport, shelljs, and optimist are npm-installed
 
-## Install
+## Install and Test Drive
 
 	git clone https://github.com/billroy/bitty.js.git
 	npm install
@@ -27,6 +28,12 @@ Once Bitlash comes up in the terminal you can type commands just like any other 
 ## Security 
 
 Change the default passwords!  Edit config.users in index.js!
+
+	var config = {
+		'users': {
+			'bitlash':'open sesame'
+		}, ...
+	}
 
 ## Runtime options
 
