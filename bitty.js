@@ -52,7 +52,7 @@ if (port) {
 
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
-require('tty').setRawMode(true);			// pass ^C through to serial port
+process.stdin.setRawMode(true);			// pass ^C through to serial port
 process.stdin.on('data', function (data) {	// keyboard input goes to port
 	if (data === '\x1d') process.exit();	// ^] to quit
 	else if (port) port.write(data);
