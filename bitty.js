@@ -19,8 +19,8 @@ if (argv.help) {
 shell = require("shelljs");
 var portlist, portname;
 
-if (argv.port) portlist = shell.ls(argv.port);
-else if (process.platform === 'darwin') portlist = shell.ls("/dev/tty.usbserial*");
+if (argv.port) portlist = [argv.port];
+else if (process.platform === 'darwin') portlist = shell.ls("/dev/tty.usb*");
 else if (process.platform === 'linux') portlist = shell.ls("/dev/ttyUSB*");
 
 if (portlist.length == 0) {
