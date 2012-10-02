@@ -8,7 +8,7 @@
 		"start": "node index"
 	},
 	"dependencies" : {
-		"serialport": "0.7.3",
+		"serialport": ">=0.7.3",
 		"tty.js"	: ">=0.2.6",
 		"shelljs"	: ">=0.0.5",
 		"optimist"  : ">=0.3.4"

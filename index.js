@@ -45,4 +45,11 @@ var configfile = process.env['HOME'] + '/.tty.js/config.json';
 var fs = require('fs');
 fs.writeFileSync(configfile, JSON.stringify(config));
 
-module.exports = require('tty.js');
+var tty = require('tty.js');
+
+var conf = tty.config.readConfig();
+var app = tty.createServer(conf);
+
+app.listen();
+
+module.exports = app;
