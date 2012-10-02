@@ -41,15 +41,8 @@ var config = {
 //  }
 };
 
-var configfile = process.env['HOME'] + '/.tty.js/config.json';
-var fs = require('fs');
-fs.writeFileSync(configfile, JSON.stringify(config));
-
 var tty = require('tty.js');
-
-var conf = tty.config.readConfig();
-var app = tty.createServer(conf);
-
+var app = tty.createServer(config);
 app.listen();
 
 module.exports = app;
