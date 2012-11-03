@@ -2,7 +2,7 @@
 
 A web terminal for usb serial devices like Bitlash + Arduino, based on tty.js
 
-![bitty screen shot](serial-web-terminal/master/bitty-screen-shot.png)
+![bitty screen shot](https://raw.github.com/billroy/serial-web-terminal/master/bitty-screen-shot.png)
 
 ## Prerequisites
 
