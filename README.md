@@ -1,8 +1,8 @@
-# bitty.js
+# serial-web-terminal
 
 A web terminal for usb serial devices like Bitlash + Arduino, based on tty.js
 
-![bitty screen shot](bitty.js/raw/master/bitty-screen-shot.png)
+![bitty screen shot](serial-web-terminal/raw/master/bitty-screen-shot.png)
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ A web terminal for usb serial devices like Bitlash + Arduino, based on tty.js
 
 ## Install and Test Drive
 
-	git clone https://github.com/billroy/bitty.js.git
+	git clone https://github.com/billroy/serial-web-terminal.git
 	npm install
 	node index.js
 	
@@ -64,9 +64,6 @@ Auto-detects first FTDI serial port on Mac and Linux.
 
 	$ node bitty.js -p serialport -b baud
 
-## Todo
-
-
 ## Bugs
 
   * BUG: seems to reset the Arduino twice, most times.
@@ -76,9 +73,3 @@ Auto-detects first FTDI serial port on Mac and Linux.
 	* disable new-tab?
 
   * BUG: The usernames and passwords should be SHA-hashed for tty.js
-
-
-## Caveat
-
-  * Writes to ~/.tty.js/config.json 
-	
