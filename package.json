@@ -8,12 +8,12 @@
 		"start": "node index"
 	},
 	"dependencies" : {
-		"serialport": ">=0.7.3",
+		"serialport": ">=1.1.0",
 		"tty.js"	: ">=0.2.6",
 		"shelljs"	: ">=0.0.5",
 		"optimist"  : ">=0.3.4"
 	},
 	"engine": {
-		"node": ">=0.6"
+		"node": ">=0.10.1"
 	}
 }

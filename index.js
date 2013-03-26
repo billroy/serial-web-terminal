@@ -1,7 +1,7 @@
 //
 //	index.js for bitty.js terminal shell server
 //
-//	Copyright 2012 Bill Roy (MIT License)
+//	Copyright 2013 Bill Roy (MIT License)
 //
 var opt = require('optimist');
 var argv = opt.usage('Usage: $0 [flags]')
