@@ -14,6 +14,7 @@ A web terminal for usb serial devices like Bitlash + Arduino, based on tty.js
 ## Install and Test Drive
 
 	git clone https://github.com/billroy/serial-web-terminal.git
+	cd serial-web-terminal
 	npm install
 	node index.js
 	
